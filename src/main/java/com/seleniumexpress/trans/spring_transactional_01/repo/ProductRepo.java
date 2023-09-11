@@ -13,12 +13,13 @@ public class ProductRepo {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	//@Transactional
+	@Transactional
 	public void saveProduct(Product product) {
 		
 		String sql = "INSERT INTO PRODUCT VALUES (?,?)";
 		Object[] args = {product.getId(), product.getName()};
 		jdbcTemplate.update(sql, args);
+		
 		System.out.println("product saved...");
 	}
 

@@ -16,7 +16,7 @@ public class ProductService {
 	@Transactional
 	public void saveProductInfo() {
 		
-		System.out.println("method started : " + "saveProductInfo()");
+//		System.out.println("method started : " + "saveProductInfo()");
 		
 		for (int i =1; i <=10; i++) {
 			Product product =  new Product();
@@ -25,10 +25,9 @@ public class ProductService {
 			
 			productRepo.saveProduct(product);
 			
-			if (i == 7) {
-				throw new RuntimeException("somw error occured...");
-			}
 		} //commit
+		
+//		System.out.println("method completed : " + "saveProductInfo()");
 	}
 
 }
