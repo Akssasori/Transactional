@@ -13,10 +13,10 @@ public class ProductService {
 	@Autowired
 	ProductRepo productRepo;
 	
-	@Transactional
+	@Transactional //connection start || required
 	public void saveProductInfo() {
 		
-//		System.out.println("method started : " + "saveProductInfo()");
+		// create a product
 		
 		for (int i =1; i <=10; i++) {
 			Product product =  new Product();
@@ -27,7 +27,6 @@ public class ProductService {
 			
 		} //commit
 		
-//		System.out.println("method completed : " + "saveProductInfo()");
 	}
 
 }
